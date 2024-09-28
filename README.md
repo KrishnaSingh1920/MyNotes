@@ -1,2 +1,2 @@
 # MyNotes
-A Collecting Of B.Tech CSE-AI Notes
+A Collection Of B.Tech CSE-AI Notes
