@@ -1,37 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes</title>
 </head>
+
 <body>
     <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Maths</title>
-</head>
-<body>
-    <div>
-        <div class="heading">
-            <h2>B-Tech. CSE - A.I. Notes</h2>
-        </div>
-        <div class="heading">
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Maths</title>
+    </head>
+
+    <body>
+
+        <nav class="navbar">
+            <div class="logo">Notes</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#subjects">Subjects</a></li>
+                <li><a href="#contact">Contacts</a></li>
+            </ul>
+        </nav>
+
+        <!-- About Modal -->
+        <section id="about-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="close-about">&times;</span>
+                <h4>About The Website</h4>
+                <p>Welcome to the <strong>B-Tech CSE A.I. Notes Website</strong>. 
+                    <br>
+                    This website is designed to facilitate easy access to a comprehensive collection of notes, learning materials, and resources - all available with just a click. 
+                    <br>
+                    Below, you will find the notes organized by subject, each accompanied by respective view and download buttons. 
+                    <br>
+                    Let’s dive in and embark on your learning journey!
+                </p>
+                
+            </div>
+        </section>
+
+        <!-- Subjects Modal -->
+        <section id="subjects-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="close-subjects">&times;</span>
+                <h4>Available Subjects</h4>
+                <p>1. Mathematics</p>
+                <p>2. Computer Science</p>
+            </div>
+        </section>
+
+        <!-- Contact Modal -->
+        <section id="contact-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="close-contact">&times;</span>
+                <h4>Contact Us</h4>
+                <p>Email: krishnasinghprojects@gmail.com</p>
+                <p>Contact Number: 9026316048</p>
+            </div>
+        </section>
+
+
+
+        <div>
+            <div class="heading">
+                <h2>B-Tech. CSE - A.I. Notes</h2>
+            </div>
+
             <h3>Mathematics Notes</h3>
-                <a href="mathsnotes.html" target="_blank" class="view-button">Open</a>
-        </div>
-
-        <div class="heading">
+            <br>
+            <a href="mathsnotes.html" target="_blank" class="view-button">Open</a>
+            <br>
             <h3>Computer Notes</h3>
-                <a href="computernotes.html" target="_blank" class="view-button">Open</a>
-        </div> 
-    </div>
-    <div class="watermark">Krishna Singh</div>
-</body>
-</html>
+            <br>
+            <a href="computernotes.html" target="_blank" class="view-button">Open</a>
+
+        </div>
+        <div class="watermark">Krishna Singh</div>
+        <script src="script.js"></script>
+
+    </body>
+
+    </html>
 
 </body>
+
 </html>

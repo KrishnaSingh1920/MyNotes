@@ -1,4 +1,75 @@
 
+.navbar {
+    background: linear-gradient(90deg, #87CEEB, #00BFFF);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    user-select: none;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 16px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background-color: rgba(54, 110, 215, 0.8);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 191, 255, 0.5);
+}
+* {
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* General body styling to prevent overflow */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #00BFFF;
+}
+
+p {
+    color: #333;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     background: linear-gradient(45deg, #004b7d, #89d6ff);
@@ -76,16 +147,128 @@ a.view-button:hover, a.download-button:hover {
     background-color: #4682B4;
     color: #ffffff;
 }
-.watermark
-{
-
+.watermark {
     position: fixed;
     bottom: 10px;
     right: 10px;
     font-size: 20px;
-    color: rgba(255, 255, 255, 0.5);
-    text-shadow: 0px 0px 10px rgba(0, 0, 255, 0.5);
+    color: rgba(255, 255, 255, 0.7);
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.8), rgba(255, 226, 226, 0.3));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 10px rgba(0, 76, 255, 0.5), 0 0 20px rgba(0, 191, 255, 0.4);
     z-index: 1000;
     pointer-events: none;
-  
+    animation: float 3s ease-in-out infinite;
+    opacity: 0.9;
 }
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+
+/* Modal overlay */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.6); /* Dark background */
+    overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fff; /* White background */
+    margin: 10% auto; /* Center the modal vertically */
+    padding: 20px; /* Padding inside modal */
+    border-radius: 8px; /* Rounded corners */
+    width: 80%; /* Responsive width */
+    max-width: 400px; /* Limit max width for larger screens */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%; /* Make it wider on smaller screens */
+        max-width: 350px; /* Restrict max width */
+        margin: 15% auto; /* Center vertically with margin */
+    }
+    .modal-content h2 {
+        font-size: 18px; /* Smaller heading font */
+    }
+    .modal-content p {
+        font-size: 14px; /* Smaller paragraph font */
+    }
+}
+
+
+/* Shared modal styles are the same as for the About section */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #f0f8ff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.modal-content h2 {
+    color: #00BFFF;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Close button styling */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h4
+{
+    font-size: 24px;
+}
+
+
+
