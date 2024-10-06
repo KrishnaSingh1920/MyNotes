@@ -1,19 +1,27 @@
-
 .navbar {
     background: linear-gradient(90deg, #87CEEB, #00BFFF);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding-left: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     user-select: none;
 }
 
 .navbar .logo {
-    font-size: 24px;
+    font-size: 12px;
     font-weight: bold;
     color: white;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+    border-radius: 2px;
+}
+
+.navbar .logo:hover {
+    background-color: rgba(44, 98, 235, 0.9);
 }
 
 .nav-links {
@@ -28,8 +36,8 @@
 .nav-links a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
-    padding: 8px 16px;
+    font-size: 12px;
+    padding: 4px 8px;
     transition: background 0.3s ease, transform 0.3s ease;
     border-radius: 5px;
 }
@@ -39,15 +47,19 @@
     transform: scale(1.05);
     box-shadow: 0px 4px 15px rgba(0, 191, 255, 0.5);
 }
+
 * {
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
 }
 
 /* General body styling to prevent overflow */
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
 }
 
 section {
@@ -64,7 +76,8 @@ p {
     color: #333;
 }
 
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -72,7 +85,7 @@ body, html {
 
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background: linear-gradient(45deg, #004b7d, #89d6ff);
+    background: linear-gradient(45deg, #003b65, #68c9ff);
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
@@ -81,6 +94,7 @@ body {
 }
 
 h2 {
+    font-size: 16px;
     display: inline-block;
     color: hsl(0, 0%, 100%);
     text-shadow: 0px 0px 20px rgb(0, 76, 255);
@@ -100,11 +114,13 @@ h2 {
 .button-group {
     margin: 10px 0;
 }
-.heading
-{
+
+.heading {
     text-align: center;
 }
-h3{
+
+h3 {
+    font-size: small;
     display: inline-block;
     color: hsl(0, 0%, 100%);
     text-shadow: 0px 0px 20px rgb(0, 76, 255);
@@ -113,7 +129,7 @@ h3{
     outline: none;
     -webkit-tap-highlight-color: transparent;
     user-select: none;
-    padding: 0.5em 2em;
+    padding: 0.5em 0.5em;
     margin-left: 2.5vh;
     background: linear-gradient(135deg, #8fe3ff, #00bfff);
     background-size: cover;
@@ -121,8 +137,9 @@ h3{
     box-shadow: 0px 0px 75px rgba(0, 76, 255, 0.5);
 }
 
-a.view-button, a.download-button {
-    padding: 10px 22.5px;
+a.view-button,
+a.download-button {
+    padding: 5px 15px;
     text-decoration: none;
     font-size: 16px;
     border-radius: 5px;
@@ -143,31 +160,18 @@ a.download-button {
     box-shadow: 0px 0px 15px rgba(30, 144, 255, 0.5);
 }
 
-a.view-button:hover, a.download-button:hover {
+a.view-button:hover,
+a.download-button:hover {
     background-color: #4682B4;
     color: #ffffff;
 }
-.watermark {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    font-size: 20px;
-    color: rgba(255, 255, 255, 0.7);
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.8), rgba(255, 226, 226, 0.3));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 2px 2px 10px rgba(0, 76, 255, 0.5), 0 0 20px rgba(0, 191, 255, 0.4);
-    z-index: 1000;
-    pointer-events: none;
-    animation: float 3s ease-in-out infinite;
-    opacity: 0.9;
-}
-
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-5px);
     }
@@ -177,40 +181,61 @@ a.view-button:hover, a.download-button:hover {
 
 /* Modal overlay */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1000;
+    /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0, 0, 0, 0.6); /* Dark background */
-    overflow: auto; /* Enable scroll if needed */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Dark background */
+    overflow: auto;
+    /* Enable scroll if needed */
 }
 
 /* Modal content */
 .modal-content {
-    background-color: #fff; /* White background */
-    margin: 10% auto; /* Center the modal vertically */
-    padding: 20px; /* Padding inside modal */
-    border-radius: 8px; /* Rounded corners */
-    width: 80%; /* Responsive width */
-    max-width: 400px; /* Limit max width for larger screens */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+    background-color: #fff;
+    /* White background */
+    margin: 10% auto;
+    /* Center the modal vertically */
+    padding: 20px;
+    /* Padding inside modal */
+    border-radius: 8px;
+    /* Rounded corners */
+    width: 80%;
+    /* Responsive width */
+    max-width: 400px;
+    /* Limit max width for larger screens */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    /* Box shadow for depth */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .modal-content {
-        width: 90%; /* Make it wider on smaller screens */
-        max-width: 350px; /* Restrict max width */
-        margin: 15% auto; /* Center vertically with margin */
+        width: 90%;
+        /* Make it wider on smaller screens */
+        max-width: 350px;
+        /* Restrict max width */
+        margin: 15% auto;
+        /* Center vertically with margin */
     }
+
     .modal-content h2 {
-        font-size: 18px; /* Smaller heading font */
+        font-size: 18px;
+        /* Smaller heading font */
     }
+
     .modal-content p {
-        font-size: 14px; /* Smaller paragraph font */
+        font-size: 14px;
+        /* Smaller paragraph font */
     }
 }
 
@@ -265,10 +290,23 @@ a.view-button:hover, a.download-button:hover {
     cursor: pointer;
 }
 
-h4
-{
+h4 {
     font-size: 24px;
 }
 
-
-
+.watermark {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.8), rgba(255, 226, 226, 0.3));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 10px rgba(0, 76, 255, 0.5), 0 0 20px rgba(0, 191, 255, 0.4);
+    z-index: 1000;
+    pointer-events: none;
+    animation: float 3s ease-in-out infinite;
+    opacity: 0.9;
+}
